@@ -1,3 +1,40 @@
-*{
+* {
   margin: 0;
+}
+/* color #2C2C54, deep purple-gray #474787, cool gray #AAABB8, light gray #ECECEC */
+.FotoM {
+  max-width: 50%;
+  border: 5px solid #2c2c54;
+  border-radius: 100%;
+  -webkit-box-shadow: -15px 18px 8px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -15px 18px 8px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: -15px 18px 8px -5px rgba(0, 0, 0, 0.75);
+}
+.LogoF {
+  max-width: 40%;
+}
+.Text {
+  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  color: #ececec;
+}
+h2 {
+  color: #ececec;
+}
+h3 {
+  color: #474787;
+}
+.ContatosT {
+  color: #ececec;
+}
+.UL-LI-CT {
+  color: #ececec;
+}
+ul {
+  list-style-type: none;
+  padding-bottom: 5px;
 }
