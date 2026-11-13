@@ -1,3 +1,12 @@
+> **Este portfólio foi substituído.** O endereço atual é **https://felipemr.com**
+>
+> O link antigo (`felipemonrod.github.io/Portfolio/`) foi entregue em currículos,
+> então continua no ar — mas agora só com uma página que redireciona.
+>
+> **O redirecionamento está no branch `gh-pages`, não aqui.** É de lá que o
+> GitHub Pages serve este site; mexer no `main` não muda nada do que o visitante
+> vê. Este branch segue guardando o código-fonte em React, intacto.
+
 #PORTUGUESE
 Para rodar o arquivo, basta ter o Node instalado na maquina e rodar os comandos na pasta do programa:
 "npm install" para instalar as dependencias.
