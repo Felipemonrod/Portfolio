@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      PÁGINA 404 — cobre qualquer caminho antigo que alguém tenha anotado
+      (por exemplo /Portfolio-Html/projetos.html) e manda para o site novo.
+
+      Por que não um 301 de verdade: o GitHub Pages serve arquivos estáticos e
+      não deixa definir cabeçalhos HTTP, então `301 Moved Permanently` não é
+      possível aqui. O que dá para fazer é esta combinação, em três camadas que
+      se cobrem:
+
+        1. <meta http-equiv="refresh"> — funciona sem JavaScript nenhum.
+        2. <link rel="canonical">      — diz ao buscador qual é a versão boa,
+                                          para o endereço novo herdar a
+                                          relevância em vez de competir.
+        3. location.replace()          — troca a entrada no histórico em vez de
+                                          empilhar. Com `href` comum, apertar
+                                          "voltar" traria a pessoa para cá e ela
+                                          seria redirecionada de novo, presa num
+                                          laço.
+
+      E, abaixo, um link visível: se as três falharem (proxy corporativo que
+      remove meta-refresh e bloqueia script), ninguém fica numa página morta.
+    -->
+    <title>Felipe Montalvão Rodrigues — página não existe mais aqui</title>
+    <link rel="canonical" href="https://felipemr.com/" />
+    <meta http-equiv="refresh" content="0; url=https://felipemr.com/" />
+    <meta name="description" content="Este portfólio mudou para felipemr.com" />
+
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        background: #16140f;
+        color: #ece6d9;
+        font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .marca {
+        font-family: ui-monospace, "SF Mono", Consolas, monospace;
+        font-size: 0.875rem;
+        color: #a49d8f;
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(1.5rem, 5vw, 2.25rem);
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0 0 1.75rem;
+        color: #a49d8f;
+      }
+      a.ir {
+        display: inline-block;
+        min-height: 44px;
+        padding: 0.75rem 1.25rem;
+        border: 1.5px solid #ece6d9;
+        border-radius: 2px;
+        color: #ece6d9;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a.ir:hover {
+        background: #ece6d9;
+        color: #16140f;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="marca">~/felipe</p>
+      <h1>Esta página não existe mais aqui</h1>
+      <p>Você está sendo levado para <strong>felipemr.com</strong>.</p>
+      <a class="ir" href="https://felipemr.com/">ir agora →</a>
+    </main>
+
+    <script>
+      // `replace` e não `href`: não deixa esta página no histórico, para o
+      // botão "voltar" não prender a pessoa num laço de redirecionamento.
+      // Preserva o que vier depois do domínio? Não: os caminhos do site antigo
+      // não existem no novo, e levar alguém a um 404 é pior do que à home.
+      window.location.replace("https://felipemr.com/");
+    </script>
+  </body>
+</html>
